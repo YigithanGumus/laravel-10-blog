@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\Backend\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/users',[UserController::class,'index']);
+
+Route::get('/dashboard',[DashboardController::class,'dashboard']);
 
 Route::resource("/users",UserController::class);
