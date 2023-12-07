@@ -8,5 +8,21 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, ValidatesRequests;
+    use AuthorizesRequests, ValidatesRequests, ValidatesRequests;
+
+    public $returnUrl;
+    public $fileRepo;
+
+    public function prepare($request, $fiilables)
+    {
+        $data = array();
+
+        foreach ($fiilables as $fiilable) {
+            if ($request->has($fiilable)) {
+                $data[$fiilable] = $request->get($fiilable);
+            }
+        }
+
+        return $data;
+    }
 }
