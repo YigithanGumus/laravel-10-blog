@@ -10,21 +10,26 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <label for="name" class="form-label">Ad Soyad</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Ad ve Soyad giriniz...">
+                        <input type="text" class="form-control" id="name" name="name" value="{{old('name')}}" placeholder="Ad ve Soyad giriniz...">
+                        @error("name")
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="col-lg-6">
                         <label for="eposta" class="form-label">E-Posta</label>
-                        <input type="email" class="form-control" id="eposta" name="eposta" placeholder="E-Posta giriniz...">
+                        <input type="email" class="form-control" id="eposta" name="email" value="{{old('email')}}" placeholder="E-Posta giriniz...">
+                        @error("email")
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                 </div>
                 <div class="row mt-3">
                     <div class="col-lg-6">
                         <label for="password" class="form-label">Şifre giriniz</label>
                         <input type="password" class="form-control" id="password" name="password" placeholder="Şifre giriniz">
-                    </div>
-                    <div class="col-lg-6">
-                        <label for="password2" class="form-label">Şifreyi Tekrar giriniz</label>
-                        <input type="password" class="form-control" id="password2" name="password2" placeholder="Şifreyi tekrardan giriniz">
+                        @error("password")
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                 </div>
                 <div class="row mt-3">
