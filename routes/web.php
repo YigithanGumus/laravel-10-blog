@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AddressController;
 use App\Http\Controllers\Backend\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,6 @@ Route::get('/users',[UserController::class,'index']);
 Route::resource("/users",UserController::class);
 Route::get("/users/{user}/change-password",[UserController::class,'passwordForm']);
 Route::post("/users/{user}/change-password",[UserController::class,'changePassword']);
+
+Route::resource("/users/{users}/addresses", AddressController::class);
+
