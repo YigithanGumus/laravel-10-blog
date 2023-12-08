@@ -63,6 +63,11 @@
                                     Şifresini Değiştir
                                 </a>
                             </div>
+                            <div class="col-md-3">
+                                <a class="btn btn-outline-secondary btn-sm" href="{{url("/users/$user->user_id/addresses")}}">
+                                    Adresler
+                                </a>
+                            </div>
                         </div>
                     </td>
                 </tr>
