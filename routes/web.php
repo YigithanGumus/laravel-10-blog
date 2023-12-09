@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backend\AddressController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +25,7 @@ Route::get('/users',[UserController::class,'index']);
 Route::resource("/users",UserController::class);
 Route::get("/users/{user}/change-password",[UserController::class,'passwordForm']);
 Route::post("/users/{user}/change-password",[UserController::class,'changePassword']);
+
+Route::resource("/category", CategoryController::class);
 
 

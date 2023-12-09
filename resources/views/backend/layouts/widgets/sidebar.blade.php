@@ -11,9 +11,15 @@
                         Kullanıcılar
                     </a>
                 </li>
-
             </ul>
 
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center gap-2" href="/category">
+                        Gönderi Kategorileri
+                    </a>
+                </li>
+            </ul>
             <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-body-secondary text-uppercase">
                 <span>Site Ayarları</span>
                 <a class="link-secondary" href="#" aria-label="Add a new report">
